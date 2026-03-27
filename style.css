@@ -1,0 +1,319 @@
+body {
+text-align: center;
+}
+
+.index-page-bg {
+  background-image: url('images/landing-page-background.png'); /* Example: Background image for home */
+  background-size: cover;        /* fills container */
+  background-position: top;   /* keeps center visible */
+  background-repeat: no-repeat;
+}
+
+.week1-page-bg {
+  background-image: url('images/leaves-gif.gif'); /* Example: Background image for home */
+  background-position: top;   /* keeps center visible */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed; /* 🔥 key line */
+  background-color: green;
+}
+
+.week2-page-bg {
+  background-image: url('images/soil.jpg'); /* Example: Background image for home */
+  background-position: top;   /* keeps center visible */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 key line */
+  background-color: green;
+  color: beige;
+}
+
+.week3-page-bg {
+  background-image: url('images/soil.jpg'); /* Example: Background image for home */
+  background-position: top;   /* keeps center visible */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 key line */
+  background-color: green;
+  color: beige;
+}
+
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.week-one-navbar {
+  margin: 20px;
+  width: 40%;
+  padding: 15px 40px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: darkslategray;
+  backdrop-filter: blur(10px);
+}
+
+/* Links */
+.week-one-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  width: 100px;
+}
+
+.week-one-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.week-one-nav-links a:hover {
+  color: #aaff66;
+  transform: scale(1.1);
+}
+
+/* Navbar container */
+.week-two-navbar {
+  margin: 20px;
+  width: 40%;
+  padding: 15px 40px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: rgb(79, 56, 47);
+  backdrop-filter: blur(10px);
+}
+
+/* Links */
+.week-two-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  width: 100px;
+}
+
+.week-two-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.week-two-nav-links a:hover {
+  color: #aaff66;
+  transform: scale(1.1);
+}
+
+.fruit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
+  gap: 1rem;
+  margin-top: 200px;
+}
+
+.stall {
+    margin-top: 125px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.apple {
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.apple img {
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(630%, 230%);
+  position: absolute;
+}
+
+/* HOVER */
+.apple img:hover {
+  transform: translate(630%, 230%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+/* CLICK (active state) */
+.apple img:active {
+  transform: translate(630%, 230%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+.banana {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.banana img {
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(170%, -200%);
+  position: absolute;
+}
+
+/* HOVER */
+.banana img:hover {
+  transform: translate(170%, -200%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+/* CLICK (active state) */
+.banana img:active {
+  transform: translate(170%, -200%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+.milk {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.milk img {
+  width: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-260%, -345%);
+  position: absolute;
+}
+
+/* HOVER */
+.milk img:hover {
+  transform: translate(-260%, -345%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+/* CLICK (active state) */
+.milk img:active {
+  transform: translate(-260%, -345%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+.grape {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.grape img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -320%);
+  position: absolute;
+}
+
+.potato {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.potato img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-250%, -100%);
+  position: absolute;
+  opacity: 50%;
+}
+
+/* HOVER */
+.potato img:hover {
+  transform: translate(-250%, -100%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+/* CLICK (active state) */
+.potato img:active {
+  transform: translate(-250%, -100%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+.orange {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.orange img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(165%, -295%);
+  position: absolute;
+  opacity: 70%;
+}
+
+/* HOVER */
+.orange img:hover {
+  transform: translate(165%, -295%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+/* CLICK (active state) */
+.orange img:active {
+  transform: translate(165%, -295%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+.new-interfaces {
+  display: flex;
+  flex-direction: row;
+}
+
+.beetle-square {
+  background-color: greenyellow;
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.ball-square {
+  background-color: greenyellow;
+  width: 400px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.new-words-square {
+  background-color: rgb(52, 66, 30);
+  color: beige;
+  width: 80vw;
+  padding: 20px;
+  margin: 20px;
+}
+
+.twelve-hour-square {
+  background-color: rgb(95, 138, 27);
+  color: beige;
+  width: 80vw;
+  padding: 20px;
+  margin: 20px;
+}
+
+.hunter-gatherer-square {
+  background-color: rgb(153, 192, 91);
+  color: rgb(95, 95, 36);
+  width: 80vw;
+  padding: 20px;
+  margin: 20px;
+}

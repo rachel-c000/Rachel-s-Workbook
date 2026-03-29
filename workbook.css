@@ -1,0 +1,69 @@
+.workbook-page-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; 
+  background-color: rgb(210, 120, 61);
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* navbar */
+.workbook-navbar {
+  margin: 0;
+  width: 500px;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  transform: translate(-35%, 0%);
+  position: absolute;
+}
+
+.workbook-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 20px;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.workbook-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.workbook-nav-links li {
+padding-left: 33px;
+padding-right: 33px;
+width: 50px;
+}
+
+.workbook-nav-links a:hover {
+  color: #aaff66;
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 200px); 
+  gap: 10px; 
+  width: 600px; 
+  margin: auto;
+  padding: 20px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+

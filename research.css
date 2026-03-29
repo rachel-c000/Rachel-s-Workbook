@@ -1,15 +1,14 @@
 .research-page-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* 🔥 key line */
+  background-attachment: fixed; 
   background-color: rgb(52, 52, 52);
   color: beige;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
 }
 
-/* navbar */
 .research-navbar {
   margin: 0;
   width: 500px;
@@ -38,14 +37,31 @@
   background-color: transparent;
 }
 
-.workbook-nav-links li {
+.research-nav-links li {
 padding-left: 33px;
 padding-right: 33px;
 width: 50px;
 }
 
-.workbook-nav-links a:hover {
+.research-nav-links a:hover {
   color: #aaff66;
   transform: scale(1.1);
   background-color: transparent;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 200px); 
+  gap: 10px; 
+  width: 600px; 
+  margin: auto;
+  padding: 20px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
 }

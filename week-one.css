@@ -1,0 +1,264 @@
+.week1-page-bg {
+  background-image: url('images/green-background.png'); /* Example: Background image for home */
+  background-position: top;   /* keeps center visible */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 key line */
+  background-color: green;
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* disables normal scrolling */
+}
+
+#viewport {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: grab;
+}
+
+#viewport:active {
+  cursor: grabbing;
+}
+
+#canvas {
+  width: 2000px;  /* make bigger than screen */
+  height: 2000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drag {
+  transform: translate(30%, 0%);
+  position: absolute;
+  color: darkred;
+}
+
+/* Navbar container */
+.week-one-navbar {
+  margin: 0px;
+  border: 0px;
+  padding: 15px 40px;
+
+  display: flex;
+  align-items: center;
+
+background-image: url(images/week-one-nav.png);
+background-size: contain;
+  backdrop-filter: blur(10px);
+}
+
+/* Links */
+.week-one-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.week-one-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+/* Hover effect */
+.week-one-nav-links a:hover {
+  color: #aaff66;
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.new-interfaces {
+  display: flex;
+  flex-direction: row;
+}
+
+.beetle-flower {
+  background-image: url("images/big-flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 600px;
+  height: 350px;
+  padding: 50px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(-15%, 0%);
+  position: absolute;
+}
+
+.beetle-p {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translate(180%, 90%);
+  position: absolute;
+  width: 300px;
+  color: darkgreen;
+}
+
+.ball-flower {
+  background-image: url("images/flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 600px;
+  height: 350px;
+  padding: 50px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(100%, 40%);
+  position: absolute;
+}
+
+.ball-p {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translate(450%, 150%);
+  position: absolute;
+  width: 300px;
+  color: darkgreen;
+}
+
+.new-words-flower {
+  background-image: url("images/flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 400px;
+  padding: 60px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(-60%, 250%);
+  position: absolute;
+}
+
+.new-words-p {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translate(40%, 3300%);
+  position: absolute;
+  width: 300px;
+  color: darkgreen;
+}
+
+.twelve-hour-flower {
+  background-image: url("images/flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 400px;
+  padding: 80px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(50%, 300%);
+  position: absolute;
+}
+
+.twelve-hour-p {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translate(200%, 280%);
+  position: absolute;
+  width: 400px;
+  color: darkgreen;
+}
+
+.hunter-gatherer-flower {
+  background-image: url("images/flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 400px;
+  padding: 60px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(-30%, 400%);
+  position: absolute;
+}
+
+.hunter-gatherer-p {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  transform: translate(200%, 280%);
+  position: absolute;
+  width: 400px;
+  color: darkgreen;
+}
+
+.hunter-gatherer-anorak {
+  background-image: url("images/pink-flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 400px;
+  padding: 60px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #ab9657;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(-30%, 700%);
+  position: absolute;
+  font-size: small;
+}
+
+.week-one-title {
+  background-image: url("images/blue-flower.png");
+  background-size: contain;       /* fills the div */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-position: center;  /* centers the image */
+  width: 400px;
+  padding: 20px;
+  margin: 30px;
+  display: flex;         
+  flex-direction: column;     /* REQUIRED */
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+  color: #000000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transform: translate(110%, 0%);
+  position: absolute;
+}

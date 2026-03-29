@@ -5,9 +5,9 @@ font-family: Arial, sans-serif;
 }
 
 .index-page-bg {
-  background-image: url('images/landing-page-background.png'); /* Example: Background image for home */
-  background-size: cover;        /* fills container */
-  background-position: center -70px;   /* keeps center visible */
+  background-image: url('images/landing-page-background.png'); 
+  background-size: cover;       
+  background-position: center -70px;  
   background-repeat: no-repeat;
 }
 

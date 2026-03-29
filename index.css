@@ -1,0 +1,178 @@
+body {
+text-align: center;
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+.index-page-bg {
+  background-image: url('images/landing-page-background.png'); /* Example: Background image for home */
+  background-size: cover;        /* fills container */
+  background-position: center -70px;   /* keeps center visible */
+  background-repeat: no-repeat;
+}
+
+.fruit-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
+  gap: 1rem;
+  margin-top: 200px;
+}
+
+.stall {
+    margin-top: 125px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+/* apple */
+
+.apple {
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.apple img {
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(900%, 300%);
+  position: absolute;
+}
+
+.apple img:hover {
+  transform: translate(900%, 300%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.apple img:active {
+  transform: translate(900%, 300%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* banana */
+
+.banana {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.banana img {
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(190%, -140%);
+  position: absolute;
+}
+
+.banana img:hover {
+  transform: translate(190%, -140%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.banana img:active {
+  transform: translate(190%, -140%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* milk */
+
+.milk {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.milk img {
+  width: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-300%, -325%);
+  position: absolute;
+}
+
+.milk img:hover {
+  transform: translate(-300%, -325) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.milk img:active {
+  transform: translate(-300%, -325) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* grape */
+
+.grape {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.grape img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -310%);
+  position: absolute;
+}
+
+/* potato */
+
+.potato {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.potato img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-290%, -50%);
+  position: absolute;
+  opacity: 50%;
+}
+
+.potato img:hover {
+  transform: translate(-290%, -50%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.potato img:active {
+  transform: translate(-290%, -50%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* orange */
+
+.orange {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.orange img {
+  width: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(200%, -290%);
+  position: absolute;
+  opacity: 70%;
+}
+
+.orange img:hover {
+  transform: translate(200%, -290%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.orange img:active {
+  transform: translate(200%, -290%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+
+

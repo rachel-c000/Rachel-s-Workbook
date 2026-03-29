@@ -1,9 +1,9 @@
 .week1-page-bg {
-  background-image: url('images/green-background.png'); /* Example: Background image for home */
-  background-position: top;   /* keeps center visible */
+  background-image: url('images/green-background.png'); 
+  background-position: top;  
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* 🔥 key line */
+  background-attachment: fixed; 
   background-color: green;
   padding: 0px;
   margin: 0px;
@@ -12,7 +12,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  overflow: hidden; /* disables normal scrolling */
+  overflow: hidden; 
 }
 
 #viewport {
@@ -27,7 +27,7 @@ html, body {
 }
 
 #canvas {
-  width: 2000px;  /* make bigger than screen */
+  width: 2000px;  
   height: 2000px;
   position: absolute;
   top: 0;
@@ -40,7 +40,6 @@ html, body {
   color: darkred;
 }
 
-/* Navbar container */
 .week-one-navbar {
   margin: 0px;
   border: 0px;
@@ -54,7 +53,6 @@ background-size: contain;
   backdrop-filter: blur(10px);
 }
 
-/* Links */
 .week-one-nav-links {
   list-style: none;
   display: flex;
@@ -72,7 +70,6 @@ background-size: contain;
   background-color: transparent;
 }
 
-/* Hover effect */
 .week-one-nav-links a:hover {
   color: #aaff66;
   transform: scale(1.1);
@@ -86,17 +83,17 @@ background-size: contain;
 
 .beetle-flower {
   background-image: url("images/big-flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 600px;
   height: 350px;
   padding: 50px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;    
+  justify-content: center;    
+  align-items: center;       
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(-15%, 0%);
@@ -115,17 +112,17 @@ background-size: contain;
 
 .ball-flower {
   background-image: url("images/flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 600px;
   height: 350px;
   padding: 50px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;     
+  justify-content: center;  
+  align-items: center;        
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(100%, 40%);
@@ -144,16 +141,16 @@ background-size: contain;
 
 .new-words-flower {
   background-image: url("images/flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 400px;
   padding: 60px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;     
+  justify-content: center;   
+  align-items: center;        
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(-60%, 250%);
@@ -172,16 +169,16 @@ background-size: contain;
 
 .twelve-hour-flower {
   background-image: url("images/flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 400px;
   padding: 80px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;    
+  justify-content: center;    
+  align-items: center;        
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(50%, 300%);
@@ -200,16 +197,16 @@ background-size: contain;
 
 .hunter-gatherer-flower {
   background-image: url("images/flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 400px;
   padding: 60px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;       
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(-30%, 400%);
@@ -228,16 +225,16 @@ background-size: contain;
 
 .hunter-gatherer-anorak {
   background-image: url("images/pink-flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 400px;
   padding: 60px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;     
+  justify-content: center;   
+  align-items: center;        
   color: #ab9657;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(-30%, 700%);
@@ -247,16 +244,16 @@ background-size: contain;
 
 .week-one-title {
   background-image: url("images/blue-flower.png");
-  background-size: contain;       /* fills the div */
-  background-repeat: no-repeat; /* prevents tiling */
-  background-position: center;  /* centers the image */
+  background-size: contain;       
+  background-repeat: no-repeat; 
+  background-position: center;  
   width: 400px;
   padding: 20px;
   margin: 30px;
   display: flex;         
-  flex-direction: column;     /* REQUIRED */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;        
   color: #000000;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transform: translate(110%, 0%);

@@ -1,0 +1,110 @@
+h1 {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  transform: translate(-1%, -70%);
+  position: absolute;  
+  color: #aaff66;
+}
+
+h2 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #aaff66;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: "Bungee", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-style: normal;
+  color: #aaff66;
+}
+
+p {
+  color: #aaff66;
+}
+
+.week3-page-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 key line */
+  background-color: rgb(55, 57, 168);
+  color: beige;
+  padding: 50px;
+}
+
+.prompts-carousel {
+  display: flex;
+  flex-direction: row;
+  margin-top: -30px;
+}
+
+.prompt {
+  width: fit-content;
+  padding: 10px;
+}
+
+.frog-wrapper {
+  transform: scaleY(-1, -1); /* flip once here */
+  display: flex;
+  flex-direction: row;
+  transform: translate(30%, -40%);
+  position: absolute;
+
+}
+
+.frog {
+  animation: frogJump 1s ease-in-out infinite;
+}
+
+/* Navbar container */
+.week-three-navbar {
+  margin: 0;
+  width: 500px;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  transform: translate(62%, 0%);
+  position: absolute;
+}
+
+/* Links */
+.week-three-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 20px;
+  width: fit-content;
+  background-color: transparent;
+}
+
+.week-three-nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.week-three-nav-links li {
+padding-left: 33px;
+padding-right: 33px;
+}
+
+/* Hover effect */
+.week-three-nav-links a:hover {
+  color: #aaff66;
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+.wave {
+  display: block;
+  width: 100%;
+  height: 100px;
+}

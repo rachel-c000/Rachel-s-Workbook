@@ -1,13 +1,12 @@
 .week2-page-bg {
-  background-position: top;   /* keeps center visible */
+  background-position: top;   
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* 🔥 key line */
+  background-attachment: fixed; 
   background-color: #503123;
   color: #e5f87f;
 }
 
-/* Navbar container */
 .week-two-navbar {
   margin: 20px;
   width: 10%;
@@ -37,7 +36,6 @@
   font-family: "Pixelify Sans", "Public Pixel", monospace;
 }
 
-/* Hover effect */
 .week-two-nav-links a:hover {
   color: #aaff66;
   transform: scale(1.1);

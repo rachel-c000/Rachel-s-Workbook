@@ -9,6 +9,7 @@ font-family: Arial, sans-serif;
   background-size: cover;       
   background-position: center -70px;  
   background-repeat: no-repeat;
+  min-height: 100vh; /* key fix */
 }
 
 .fruit-gallery {
@@ -35,15 +36,15 @@ font-family: Arial, sans-serif;
 }
 
 .apple img {
-  width: 50px;
+  width: 90px;
   top: 50%;
   left: 50%;
-  transform: translate(900%, 300%);
+  transform: translate(650%, 315%);
   position: absolute;
 }
 
 .apple img:hover {
-  transform: translate(900%, 300%) scale(1.1) rotate(5deg);
+  transform: translate(650%, 315%) scale(1.1) rotate(5deg);
   filter: hue-rotate(40deg);
 }
 
@@ -61,15 +62,15 @@ font-family: Arial, sans-serif;
 }
 
 .banana img {
-  width: 50px;
+  width: 90px;
   top: 50%;
   left: 50%;
-  transform: translate(190%, -140%);
+  transform: translate(150%, 50px);
   position: absolute;
 }
 
 .banana img:hover {
-  transform: translate(190%, -140%) scale(1.1) rotate(5deg);
+  transform: translate(150%, 50%) scale(1.1) rotate(5deg);
   filter: hue-rotate(40deg);
 }
 
@@ -87,10 +88,10 @@ font-family: Arial, sans-serif;
 }
 
 .milk img {
-  width: 35px;
+  width: 60px;
   top: 50%;
   left: 50%;
-  transform: translate(-300%, -325%);
+  transform: translate(-260%, -110%);
   position: absolute;
 }
 
@@ -113,11 +114,21 @@ font-family: Arial, sans-serif;
 }
 
 .grape img {
-  width: 60px;
+  width: 90px;
   top: 50%;
   left: 50%;
-  transform: translate(-30%, -310%);
+  transform: translate(-30%, -110%);
   position: absolute;
+}
+
+.grape img:hover {
+  transform: translate(-30%, -110%) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.grape img:active {
+  transform: translate(-30%, -110%) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
 }
 
 /* potato */
@@ -129,21 +140,21 @@ font-family: Arial, sans-serif;
 }
 
 .potato img {
-  width: 60px;
+  width: 110px;
   top: 50%;
   left: 50%;
-  transform: translate(-290%, -50%);
+  transform: translate(-220%, 100%);
   position: absolute;
   opacity: 50%;
 }
 
 .potato img:hover {
-  transform: translate(-290%, -50%) scale(1.1) rotate(5deg);
+  transform: translate(-220%, -100%) scale(1.1) rotate(5deg);
   filter: hue-rotate(40deg);
 }
 
 .potato img:active {
-  transform: translate(-290%, -50%) scale(1.05) rotate(-5deg);
+  transform: translate(-220%, -100%) scale(1.05) rotate(-5deg);
   filter: hue-rotate(120deg);
 }
 
@@ -156,16 +167,16 @@ font-family: Arial, sans-serif;
 }
 
 .orange img {
-  width: 60px;
+  width: 90px;
   top: 50%;
   left: 50%;
-  transform: translate(200%, -290%);
+  transform: translate(200%, -80%);
   position: absolute;
   opacity: 70%;
 }
 
 .orange img:hover {
-  transform: translate(200%, -290%) scale(1.1) rotate(5deg);
+  transform: translate(200%, -80%) scale(1.1) rotate(5deg);
   filter: hue-rotate(40deg);
 }
 

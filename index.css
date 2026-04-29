@@ -9,7 +9,8 @@ font-family: Arial, sans-serif;
   background-size: cover;       
   background-position: center -70px;  
   background-repeat: no-repeat;
-  min-height: 100vh; /* key fix */
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .fruit-gallery {
@@ -49,7 +50,7 @@ font-family: Arial, sans-serif;
 }
 
 .apple img:active {
-  transform: translate(900%, 300%) scale(1.05) rotate(-5deg);
+  transform: translate(650%, 315%) scale(1.05) rotate(-5deg);
   filter: hue-rotate(120deg);
 }
 
@@ -149,12 +150,12 @@ font-family: Arial, sans-serif;
 }
 
 .potato img:hover {
-  transform: translate(-220%, -100%) scale(1.1) rotate(5deg);
+  transform: translate(-220%, 100%) scale(1.1) rotate(5deg);
   filter: hue-rotate(40deg);
 }
 
 .potato img:active {
-  transform: translate(-220%, -100%) scale(1.05) rotate(-5deg);
+  transform: translate(-220%, 100%) scale(1.05) rotate(-5deg);
   filter: hue-rotate(120deg);
 }
 
@@ -185,5 +186,80 @@ font-family: Arial, sans-serif;
   filter: hue-rotate(120deg);
 }
 
+/* peanut */
 
+.peanut {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
 
+.peanut img {
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(280%, -95px);
+  position: absolute;
+}
+
+.peanut img:hover {
+  transform: translate(280%, -95px) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.peanut img:active {
+  transform: translate(280%, -95px) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* sugarcane */
+
+.sugarcane {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.sugarcane img {
+  width: 160px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-320%, -25px);
+  position: absolute;
+}
+
+.sugarcane img:hover {
+  transform: translate(-320%, -25px) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.sugarcane img:active {
+  transform: translate(-320%, -25px) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}
+
+/* rock */
+
+.rock {
+  margin-top: 100px;
+  position: relative;
+  align-items: center;
+}
+
+.rock img {
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(270%, 250px);
+  position: absolute;
+}
+
+.rock img:hover {
+  transform: translate(270%, 250px) scale(1.1) rotate(5deg);
+  filter: hue-rotate(40deg);
+}
+
+.rock img:active {
+  transform: translate(270%, 250px) scale(1.05) rotate(-5deg);
+  filter: hue-rotate(120deg);
+}

@@ -182,7 +182,7 @@ font-family: Arial, sans-serif;
 }
 
 .orange img:active {
-  transform: translate(200%, -290%) scale(1.05) rotate(-5deg);
+  transform: translate(200%, -80%) scale(1.05) rotate(-5deg);
   filter: hue-rotate(120deg);
 }
 

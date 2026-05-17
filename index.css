@@ -23,7 +23,7 @@ canvas {
   transition: filter 0.2s;
 }
 
-.market-item:hover {
+.market-item.has-link:hover {
   filter: brightness(1.2) sepia(0.4) saturate(2) hue-rotate(5deg);
 }
 

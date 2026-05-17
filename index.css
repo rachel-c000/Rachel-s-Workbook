@@ -5,266 +5,28 @@
 }
 
 body {
-  overflow: hidden; /* if you don't want scrollbars */
+  overflow: hidden;
 }
 
 canvas {
-  display: block; /* removes the inline gap */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
 }
 
-body {
-text-align: center;
-margin: 0;
-font-family: Arial, sans-serif;
+.market-item {
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  transition: filter 0.2s;
 }
 
-.fruit-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(222px, 1fr));
-  gap: 1rem;
-  margin-top: 200px;
+.market-item:hover {
+  filter: brightness(1.2) sepia(0.4) saturate(2) hue-rotate(5deg);
 }
 
-.stall {
-    margin-top: 125px;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-
-/* apple */
-
-.apple {
-  width: 300px;
-  height: 300px;
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.apple img {
-  width: 90px;
-  top: 50%;
-  left: 50%;
-  transform: translate(650%, 315%);
-  position: absolute;
-}
-
-.apple img:hover {
-  transform: translate(650%, 315%) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.apple img:active {
-  transform: translate(650%, 315%) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* banana */
-
-.banana {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.banana img {
-  width: 90px;
-  top: 50%;
-  left: 50%;
-  transform: translate(150%, 50px);
-  position: absolute;
-}
-
-.banana img:hover {
-  transform: translate(150%, 50%) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.banana img:active {
-  transform: translate(190%, -140%) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* milk */
-
-.milk {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.milk img {
-  width: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-260%, -110%);
-  position: absolute;
-}
-
-.milk img:hover {
-  transform: translate(-300%, -325) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.milk img:active {
-  transform: translate(-300%, -325) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* grape */
-
-.grape {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.grape img {
-  width: 90px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -110%);
-  position: absolute;
-}
-
-.grape img:hover {
-  transform: translate(-30%, -110%) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.grape img:active {
-  transform: translate(-30%, -110%) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* potato */
-
-.potato {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.potato img {
-  width: 110px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-220%, 100%);
-  position: absolute;
-  opacity: 50%;
-}
-
-.potato img:hover {
-  transform: translate(-220%, 100%) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.potato img:active {
-  transform: translate(-220%, 100%) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* orange */
-
-.orange {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.orange img {
-  width: 90px;
-  top: 50%;
-  left: 50%;
-  transform: translate(200%, -80%);
-  position: absolute;
-  opacity: 70%;
-}
-
-.orange img:hover {
-  transform: translate(200%, -80%) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.orange img:active {
-  transform: translate(200%, -80%) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* peanut */
-
-.peanut {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.peanut img {
-  width: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(280%, -95px);
-  position: absolute;
-}
-
-.peanut img:hover {
-  transform: translate(280%, -95px) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.peanut img:active {
-  transform: translate(280%, -95px) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* sugarcane */
-
-.sugarcane {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.sugarcane img {
-  width: 160px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-320%, -25px);
-  position: absolute;
-}
-
-.sugarcane img:hover {
-  transform: translate(-320%, -25px) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.sugarcane img:active {
-  transform: translate(-320%, -25px) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
-}
-
-/* rock */
-
-.rock {
-  margin-top: 100px;
-  position: relative;
-  align-items: center;
-}
-
-.rock img {
-  width: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(270%, 250px);
-  position: absolute;
-}
-
-.rock img:hover {
-  transform: translate(270%, 250px) scale(1.1) rotate(5deg);
-  filter: hue-rotate(40deg);
-}
-
-.rock img:active {
-  transform: translate(270%, 250px) scale(1.05) rotate(-5deg);
-  filter: hue-rotate(120deg);
+.market-item img {
+  display: block;
 }

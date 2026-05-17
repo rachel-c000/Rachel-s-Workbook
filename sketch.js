@@ -3,14 +3,14 @@ let targetCamX = 0;
 let worldImg;
 let arrowLeft, arrowRight;
 let scaleFactor = 1;
-let startOffset = 4000; // tweak this to land on your middle stall
+let startOffset = 1000; // tweak this to land on your middle stall
 
 const ARROW_SIZE = 80;
-const SCROLL_AMOUNT = 2000;
+const SCROLL_AMOUNT = 1000;
 const EASE = 0.08;
 
 function preload() {
-  worldImg = loadImage("images/Index.png");
+  worldImg = loadImage("images/blank-canvas.png");
   arrowLeft = loadImage("images/arrow-left.png");
   arrowRight = loadImage("images/arrow-right.png");
 }

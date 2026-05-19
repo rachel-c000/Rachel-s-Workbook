@@ -5,14 +5,15 @@
   --lighter-green: #d2ff96;
 }
 
-/* ── Reset ─────────────────────────────────────────────────────────────────── */
+/* reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Page ──────────────────────────────────────────────────────────────────── */
+/* the page  */
 html, body {
   height: 100%;
-  overflow: hidden; /* page itself never scrolls — only the right column does */
+  overflow: hidden; 
   font-family: 'Georgia', serif;
+  cursor: none;
 }
 
 h2 {
@@ -48,7 +49,7 @@ p {
   padding-left: 20px;
 }
 
-/* ── Navbar ────────────────────────────────────────────────────────────────── */
+/* the navbar */
 .week-one-navbar {
   position: fixed;
   top: 0;

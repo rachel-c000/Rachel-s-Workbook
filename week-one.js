@@ -173,3 +173,32 @@ function drawFrame(p, img) {
 
   p.image(img, cw / 2, ch / 2, iw * scale, ih * scale);
 }
+
+const cursor = document.querySelector(".cursor");
+const cursorImg = document.querySelector(".cursor img");
+
+/* cursor images */
+const defaultCursor = "images/cursor-default.png";
+const hoverCursor = "images/cursor-hover.png";
+
+/* move cursor */
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+/* selectable items */
+const interactables = document.querySelectorAll("a, button");
+
+/* hover effects */
+interactables.forEach(item => {
+
+  item.addEventListener("mouseenter", () => {
+    cursorImg.src = hoverCursor;
+  });
+
+  item.addEventListener("mouseleave", () => {
+    cursorImg.src = defaultCursor;
+  });
+
+});

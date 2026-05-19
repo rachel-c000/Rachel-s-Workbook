@@ -1,0 +1,268 @@
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      min-height: 100vh;
+      background: #ede8e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      gap: 32px;
+      padding: 40px 20px;
+    }
+
+    /* ── Navbar ────────────────────────────────────────────────────────────────── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background: var(--light-green);
+  backdrop-filter: blur(6px);
+  padding: 10px 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #333;
+  letter-spacing: 0.04em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+ 
+    /* ── Dial wrapper ── */
+    .dial-scene {
+      position: relative;
+      width: 480px;
+      height: 480px;
+    }
+ 
+    /* ── Outer ring (spins) ── */
+    .dial-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(#b0afa8, #d8d6ce, #c8c6be, #a8a79f, #d0cec6, #b8b7af, #c0bfb7, #b0afa8);
+      box-shadow:
+        inset 0 0 0 8px #9a9990,
+        inset 0 0 0 12px #ccc9c0,
+        0 8px 40px rgba(0,0,0,0.25);
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: grab;
+    }
+ 
+    .dial-ring:active { cursor: grabbing; }
+ 
+    /* inner cutout of ring */
+    .dial-ring::before {
+      content: '';
+      position: absolute;
+      inset: 60px;
+      border-radius: 50%;
+      background: #ede8e0;
+      box-shadow: inset 0 4px 20px rgba(0,0,0,0.15), 0 0 0 6px #b8b5ac;
+    }
+ 
+    /* ── Centre disc ── */
+    .dial-center {
+      position: absolute;
+      inset: 80px;
+      border-radius: 50%;
+      background: #f0ece4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      box-shadow: inset 0 2px 12px rgba(0,0,0,0.1);
+      z-index: 5;
+    }
+ 
+    .dial-center-text {
+      font-family: 'Anton', sans-serif;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      color: #2a2820;
+      text-transform: uppercase;
+      transition: opacity 0.3s ease;
+    }
+ 
+    .dial-center-text.preview {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #6a6860;
+    }
+ 
+    /* ── Finger holes ── */
+    .hole {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #f0ece4;
+      box-shadow:
+        inset 0 3px 10px rgba(0,0,0,0.25),
+        0 2px 4px rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      transition: box-shadow 0.2s ease, background 0.2s ease;
+      z-index: 2;
+      border: 2px solid #a8a59c;
+    }
+ 
+    .hole:hover {
+      background: #fff;
+      box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.15),
+        0 4px 12px rgba(0,0,0,0.2);
+    }
+ 
+    .hole.active {
+      background: #fff;
+      box-shadow:
+        inset 0 1px 4px rgba(0,0,0,0.1),
+        0 0 0 3px #8a8880,
+        0 4px 16px rgba(0,0,0,0.2);
+    }
+ 
+    .hole-label {
+      font-family: 'Anton', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: #4a4840;
+      text-align: center;
+      line-height: 1.2;
+      padding: 4px;
+      pointer-events: none;
+    }
+ 
+    /* ── Stop notch ── */
+    .dial-notch {
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 54px;
+      background: linear-gradient(135deg, #c8c6be, #a8a79f);
+      border-radius: 0 12px 12px 0;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+ 
+    /* ── Open button ── */
+    .open-btn {
+      background: #2a2820;
+      color: #f0ece4;
+      border: none;
+      padding: 16px 48px;
+      font-family: 'Anton', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+ 
+    .open-btn:hover { background: #3a3830; }
+    .open-btn:active { transform: scale(0.97); }
+    .open-btn:disabled { background: #b8b5ac; cursor: not-allowed; }
+ 
+    /* ── Modal overlay ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(40, 38, 30, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+ 
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+ 
+    .modal {
+      background: #f0ece4;
+      border-radius: 12px;
+      padding: 40px;
+      width: 360px;
+      max-width: 90vw;
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      position: relative;
+    }
+ 
+    .modal-overlay.open .modal {
+      transform: translateY(0) scale(1);
+    }
+ 
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #6a6860;
+    }
+ 
+    .modal h2 {
+      font-family: 'Anton', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.06em;
+      color: #2a2820;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+ 
+    .modal p {
+      font-size: 14px;
+      color: #6a6860;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+ 
+    .modal-tag {
+      display: inline-block;
+      background: #2a2820;
+      color: #f0ece4;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
+ 
+    .hint {
+      font-size: 12px;
+      color: #9a9890;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }

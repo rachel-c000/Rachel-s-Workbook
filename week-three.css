@@ -80,9 +80,9 @@ p {
 .week-three-nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 0px;
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   width: fit-content;
   background-color: transparent;
 }
@@ -96,8 +96,8 @@ p {
 }
 
 .week-three-nav-links li {
-padding-left: 33px;
-padding-right: 33px;
+padding-left: 20px;
+padding-right: 20px;
 }
 
 /* Hover effect */

@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>research</title>
-    <link rel="stylesheet" href="research.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carousel</title>
+  <link rel="stylesheet" href="research.css">
 </head>
-<body class="research-page-bg">
-<nav class="research-one-navbar">
-  <ul class="research-nav-links">
+<body>
+
+<nav class="navbar">
+  <ul class="nav-links">
     <li><a href="index.html">home</a></li>
-    <li><a href="week-one.html">week 2</a></li>
+    <li><a href="week-one.html">week 1</a></li>
     <li><a href="week-two.html">week 2</a></li>
     <li><a href="week-three.html">week 3</a></li>
+    <li><a href="week-four.html">week 4</a></li>
+    <li><a href="week-five.html">week 5</a></li>
+    <li><a href="week-six.html">week 6</a></li>
+    <li><a href="week-seven.html">week 7</a></li>
+    <li><a href="week-eight.html">week 8</a></li>
+    <li><a href="week-seven.html">week 9</a></li>
     <li><a href="workbook.html">workbook</a></li>
     <li><a href="research.html">research</a></li>
   </ul>
 </nav>
-    <br>
-    <h1>research</h1>
-    <br>
-    <br>
 
-    <div class="new-interfaces">
-        
-    <div class="collage">
-  <div class="item"><h4>Ryoji Ikeda</h4><img src="images/ryoji ikeda.jpg" /><p>Installation view of Test Pattern [No.5], 2013, at Carriageworks</p></div>
-  <div class="item"><h4>TeamLabs</h4><img src="images/teamlabs.jpg" /><p>Tokyo, Japan.</p></div>
+<div class="carousel-wrapper">
+  <button class="arrow arrow-left" id="prev">&#8592;</button>
+
+  <div class="carousel-track" id="track"></div>
+
+  <button class="arrow arrow-right" id="next">&#8594;</button>
+
+  <div class="dots" id="dots"></div>
 </div>
-   
+
+<script src="research.js"></script>
+
 </body>
 </html>

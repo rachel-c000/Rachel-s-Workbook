@@ -1,3 +1,7 @@
+body {
+  background: transparent;
+}
+
 h1 {
   font-family: "Monoton", sans-serif;
   font-weight: 400;
@@ -107,4 +111,65 @@ padding-right: 33px;
   display: block;
   width: 100%;
   height: 100px;
+}
+
+.lillypad-card {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  cursor: grab;
+  z-index: 100;
+  user-select: none;
+}
+
+.lillypad-card:active {
+  cursor: grabbing;
+}
+
+.lillypad-front img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.lillypad-back {
+  display: none;
+  position: fixed;
+  width: fit-content;
+  background: rgba(20, 40, 10, 0.92);
+  border: 3px solid #aaff66;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 200;
+  color: #aaff66;
+  font-family: 'Pixelify Sans', monospace;
+}
+
+.lillypad-back.open {
+  display: block;
+}
+
+.lillypad-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #aaff66;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.lillypad-title {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: 'Pixelify Sans', monospace;
+  font-size: 30px;
+  color: #aaff66;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  pointer-events: none;
 }

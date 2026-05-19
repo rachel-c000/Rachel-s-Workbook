@@ -295,7 +295,8 @@ p {
 .ball-p,
 .new-words-p,
 .twelve-hour-p,
-.avatar-p {
+.avatar-p,
+p {
   font-size: 14px;
   line-height: 1.75;
   color: #444;

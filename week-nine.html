@@ -1,38 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week nine</title>
-
-    <link rel="stylesheet" href="week-nine.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Week 7</title>
+<link rel="stylesheet" href="week-nine.css">
 </head>
-
 <body>
+
+<div class="desktop" id="desktop">
+
+  <div class="corner-spinner">
+  <img src="images/milk-sticker.png" alt="" id="spinner">
+</div>
+
+<div class="title"><h1>Week 9</h1></div>
 
 <nav class="navbar">
   <ul class="nav-links">
-    <li><a href="index.html"><img src="images/home-keyboard.png" width="50px"></a></li>
-    <li><a href="week-one.html"><img src="images/week1-keyboard.png" width="50px"></a></li>
-    <li><a href="week-two.html"><img src="images/week2-keyboard.png" width="50px"></a></li>
-    <li><a href="week-three.html"><img src="images/week3-keyboard.png" width="50px"></a></li>
-    <li><a href="week-four.html"><img src="images/week4-keyboard.png" width="50px"></a></li>
-    <li><a href="week-five.html"><img src="images/week5-keyboard.png" width="50px"></a></li>
-    <li><a href="week-six.html"><img src="images/week6-keyboard.png" width="50px"></a></li>
-    <li><a href="week-seven.html"><img src="images/week7-keyboard.png" width="50px"></a></li>
-    <li><a href="week-eight.html"><img src="images/week8-keyboard.png" width="50px"></a></li>
-    <li><a href="week-nine.html"><img src="images/week9-keyboard.png" width="50px"></a></li>
-    <li><a href="workbook.html"><img src="images/workbook-keyboard.png" width="50px"></a></li>
-    <li><a href="research.html"><img src="images/research-keyboard.png" width="50px"></a></li>
+    <div class="nav-tab"><li><a href="index.html">home</a></li></div>
+    <div class="nav-tab"><li><a href="week-one.html">week 1</a></li></div>
+    <div class="nav-tab"><li><a href="week-two.html">week 2</a></li></div>
+    <div class="nav-tab"><li><a href="week-three.html">week 3</a></li></div>
+    <div class="nav-tab"><li><a href="week-four&five.html">week 4 & 5</a></li></div>
+    <div class="nav-tab"><li><a href="week-six.html">week 6</a></li></div>
+    <div class="nav-tab"><li><a href="week-seven&eight.html">week 7 & 8</a></li></div>
+    <div class="nav-tab"><li><a href="week-nine.html">week 9</a></li></div>
+    <div class="nav-tab"><li><a href="workbook.html">workbook</a></li></div>
+    <div class="nav-tab"><li><a href="research.html">research</a></li></div>
   </ul>
 </nav>
 
-<div class="ipod">
-    <img src="images/ipod.png" width="350px">
-</div>
+  <!-- ── WINDOW 1 ── -->
+  <div class="win" style="left:60px;bottom:60px;width:480px;">
+    <div class="win-bar">
+      <div class="win-controls">
+        <div class="win-btn close-btn">✕</div>
+        <div class="win-btn">─</div>
+        <div class="win-btn">□</div>
+      </div>
+      <span class="win-title">NOTEPAD.EXE — intial-ideas.txt</span>
+    </div>
+    <div class="win-menu">
+      <span>FILE</span><span>EDIT</span><span>VIEW</span><span>HELP</span>
+    </div>
+    <div class="win-body">
+      <h1>Initial Ideas</h1>
+      <div class="meta">
+        <span>DATE: Week 9</span>
+        <span>SUBJECT: Brainstorming</span>
+      </div>
+      <hr>
+      <h3>Light Interaction</h3>
+      <p>I was and always am intially drawn to things that look pretty, aesthetic, and whimsical. I usually find warm light sources (like a moth...) and calming environments something I am interested in and once I saw these images while brainstorming on Pinterest, my initial idea was to make a light interaction installation with physical computing.</p>
+      <div class="gallery">
+      <img src="images/lights1.jpg" alt="description">
+      <img src="images/lights2.jpg" alt="description">
+      <img src="images/lights3.jpg" alt="description" width="200px">
+      </div>
+      <span class="tag">#BRAINSTORM</span>
+      <span class="tag">#LIGHT</span>
+      <span class="tag">#WARM</span>
+    </div>
+    <div class="win-status">
+      <span>C:\finalproject\intial-ideas.txt</span><span>1 of 5</span>
+    </div>
+    <div class="win-resize"><span></span><span></span><span></span></div>
+  </div>
+
+  <!-- ── WINDOW 2 ── -->
+  <div class="win" style="left:580px;top:80px;width:500px;">
+    <div class="win-bar">
+      <div class="win-controls">
+        <div class="win-btn close-btn">✕</div>
+        <div class="win-btn">─</div>
+        <div class="win-btn">□</div>
+      </div>
+      <span class="win-title">FILE EXPLORER — research</span>
+    </div>
+    <div class="win-menu">
+      <span>FILE</span><span>OPTIONS</span><span>WINDOW</span><span>HELP</span>
+    </div>
+    <div class="win-body">
+      <h1>Idea#2: Lantern Ensemble</h1>
+      <hr>
+      <h3>Lanterns as instruments</h3>
+<p>The next concept idea was where you put your hand over a lantern, it lights up and plays an instrument. There will be a laptop in front where people can change what each lantern plays what instrument. There can be different themes/seasons that the user can choose to play with through the lanterns. Headphones for users to wear in order to listen to the music more carefully and it to not disrupt others. However, this concept didn’t feel very special and just felt like an extension of a class activity we did.</p>
+<h3>The idea</h3>
+<div class="gallery">
+      <img src="images/lantern1.png" alt="description">
+      <img src="images/lantern2.png" alt="description">
+      <img src="images/lantern3.png" alt="description" width="200px">
+      </div>
+<hr>      
+<h3>Different themes</h3>
+<p>There would have been 5 themes to this, these themes emit different sounds from these said environments:</p>
+ <ul>
+        <li>under the water</li>
+        <li>forest</li>
+        <li>ensemble/orchestra</li>
+        <li>band/wind</li>
+        <li>choir</li>
+      </ul>
+<div class="gallery">
+      <img src="images/lantern4.png" alt="description">
+      <img src="images/lantern5.png" alt="description">
+      <img src="images/lantern6.png" alt="description" width="200px">
+      </div>     
+<div class="gallery">
+      <img src="images/lantern7.png" alt="description">
+      <img src="images/lantern8.png" alt="description">
+      </div>  
+  <hr>
+<h3>How it would work</h3>
+<p>The installation where it takes user input would include: the laptop, audio, and the interaction system ui.</p>
+<div class="gallery">
+      <img src="images/lantern9.png" alt="description">
+      <img src="images/lantern10.png" alt="description">
+      <img src="images/lantern11.png" alt="description" width="200px">
+      </div>  
+<hr>
+      <span class="tag">#MUSIC</span>
+      <span class="tag">#ENSEMBLE</span>
+      <span class="tag">#INTERACTION</span>
+    </div>
+    <div class="win-status">
+      <span>C:\finalproject\idea#2:lantern-ensemble</span><span>2 of 30</span>
+    </div>
+    <div class="win-resize"><span></span><span></span><span></span></div>
+  </div>
+
+  <!-- ── WINDOW 3 ── -->
+  <div class="win" style="right:100px;bottom:80px;width:600px;">
+    <div class="win-bar">
+      <div class="win-controls">
+        <div class="win-btn close-btn">✕</div>
+        <div class="win-btn">─</div>
+        <div class="win-btn">□</div>
+      </div>
+      <span class="win-title">NOTEPAD.EXE — week_four.txt</span>
+    </div>
+    <div class="win-menu">
+      <span>FILE</span><span>EDIT</span><span>FORMAT</span><span>HELP</span>
+    </div>
+    <div class="win-body">
+      <h1>Oracle Cards</h1>
+      <div class="meta">
+        <span>DATE: Week 9</span>
+        <span>SUBJECT: Tarot Reading</span>
+      </div>
+      <hr>
+      <h3>The Idea</h3>
+      <p>This next concept was a replica to a tarot reading table, expect the experience was self-driven and automatic over a real life tarot reader. The idea was to have the viewer pick three random cards from a deck of cards faced down and for the computer to scan the nfc chips on each to combine the themes of each card. With that the computer will give the user a prediction. This concept came to mind because I wanted something that was spiritual, psychological and overall whimsical. However, the idea felt too mundane and already was a concept that everyone knows already also from review from the studio and tutors. </p>
+      <div class="gallery">
+      <img src="images/oracle1.png" alt="description">
+      <img src="images/oracle2.png" alt="description">
+      <img src="images/oracle3.png" alt="description" width="200px">
+      </div>  
+      <hr>
+      <h3>My Vision</h3>
+      <p>‘Oracle Cards’ is an interactive project and immersive experience, where users can get their predictions read based on what cards they draw on the table. This particularly imitates the experience when you go and get your predictions told by the fortune teller, but this is fully automated and self-driven thanks to a hybrid of digital and physical computing. Thus, it allows the user to fully submerse themselves in the experience and explore their our train of thoughts in relation to the cards without the need of another party.</p>
+         <div class="gallery">
+      <img src="images/oracle9.png" alt="description">
+      <img src="images/oracle10.png" alt="description">
+      <img src="images/oracle11.png" alt="description" width="200px">
+      </div>  
+      <hr>
+      <h3>How it would work</h3>
+      <ul>
+        <li>cards with NFC chips</li>
+        <li>RFID reader readers the NFC chip</li>
+        <li>Arduino sends information to computer</li>
+        <li>computer reads card combination</li>
+        <li>outputs a prediction for users to read</li>
+      </ul>
+      <div class="gallery">
+      <img src="images/oracle4" alt="description">
+      <img src="images/oracle5.png" alt="description">
+      <img src="images/oracle6.png" alt="description" width="200px">
+      </div>  
+      <div class="gallery">
+      <img src="images/oracle7" alt="description">
+      <img src="images/oracle8.png" alt="description">
+      </div>  
+      <span class="tag">#TAROTREADING</span>
+      <span class="tag">#INSTALLATION</span>
+      <span class="tag">#WHIMSICAL</span>
+    </div>
+    <div class="win-status">
+      <span>C:\finalproject\oracle-cards.txt</span><span>3 of 5</span>
+    </div>
+    <div class="win-resize"><span></span><span></span><span></span></div>
+  </div>
+
+</div><!-- end desktop -->
 
 <script src="week-nine.js"></script>
 

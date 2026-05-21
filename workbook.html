@@ -1,43 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workbook</title>
-    <link rel="stylesheet" href="workbook.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workbook</title>
+  <link rel="stylesheet" href="workbook.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body class="workbook-page-bg">
 
-<nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="index.html">home</a></li>
-    <li><a href="week-one.html">week 1</a></li>
-    <li><a href="week-two.html">week 2</a></li>
-    <li><a href="week-three.html">week 3</a></li>
-    <li><a href="week-four.html">week 4</a></li>
-    <li><a href="week-five.html">week 5</a></li>
-    <li><a href="week-six.html">week 6</a></li>
-    <li><a href="week-seven.html">week 7</a></li>
-    <li><a href="week-eight.html">week 8</a></li>
-    <li><a href="week-seven.html">week 9</a></li>
-    <li><a href="workbook.html">workbook</a></li>
-    <li><a href="research.html">research</a></li>
-  </ul>
-</nav>
+  <!-- the spiner -->
+  <div class="corner-spinner spinner-tr">
+    <img src="images/yellow-sticker.png" alt="" class="spinner">
+  </div>
 
-    <h1>workbook</h1>
-    <br>
-    <br>
-    
-<div class="collage">
-  <div class="item"><img src="images/workbook brainstorm.jpg" /></div>
-  <div class="item"><img src="images/workbook sketch.jpg" /></div>
-  <div class="item"><img src="images/prompt1.png" /></div>
-  <div class="item"><img src="images/inspo-progress.jpg" /></div>
-  <div class="item"><img src="images/canva-progress.png" /></div>
-  <div class="item"><img src="images/my stall.png" /></div>
-  <div class="item"><img src="images/progress.png" /></div>
-</div>
+  <!-- navbar -->
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="week-one.html">week 1</a></li>
+      <li><a href="week-two.html">week 2</a></li>
+      <li><a href="week-three.html">week 3</a></li>
+      <li><a href="week-four&five.html">week 4 & 5</a></li>
+      <li><a href="week-six.html">week 6</a></li>
+      <li><a href="week-seven&eight.html">week 7 & 8</a></li>
+      <li><a href="week-nine.html">week 9</a></li>
+      <li><a href="workbook.html">workbook</a></li>
+      <li><a href="research.html">research</a></li>
+    </ul>
+  </nav>
+
+  <!-- title -->
+  <header class="page-header">
+    <h1 class="page-title">workbook</h1>
+    <p class="page-subtitle">a documentation of process, ideas & making</p>
+  </header>
+
+  <div class="divider"><img src="images/yellow-wavey-line.png" width="500px"></div>
+<br><br><br><br>
+  <main class="scrapbook">
+
+    <!-- 1 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/workbook brainstorm.jpg" alt="workbook brainstorm">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">ideation</span>
+        <p>Some ideations in class with physical prototyping ideas using materials given in the studio. This was an idea I came up with — a beanie the size of a globe with different buttons which when clicked open previews of webpages.</p>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="entry entry--right">
+      <div class="entry-img">
+        <img src="images/pinterest.png" alt="inspiration">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">inspiration</span>
+        <p>When going on Pinterest to find inspiration, I came across a lot of photography shots of market stalls and that sparked my interest. This would later influence the direction of my workbook.</p>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/workbook sketch.jpg" alt="workbook sketch">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">sketching</span>
+        <p>Following the inspiration images plus other market stall references and my imagination, I developed some sketches for the workbook.</p>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="entry entry--right">
+      <div class="entry-img">
+        <img src="images/prompt1.png" alt="prompt">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">prompting</span>
+        <p>In class, there was a newly released platform from Google called Stich. Stich is a platform that can ai generate ux/ui prototypes based off prompts. This was scary news to the class, but once we started generating, a group consensus was that it was not great.</p>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/my stall.png" alt="canva progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">building</span>
+        <p>Therefore, taking it into my own hands, I started making my own graphics. This was first done in figma where I made the shapes and colours for my stall, then I imported them onto Canva to use their style functions.</p>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="entry entry--right">
+      <div class="entry-img">
+        <img src="images/canva-progress.png" alt="my stall">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">the stall</span>
+        <p>This is the output from Canva that I got.</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/progress.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">Into VS Code</span>
+        <p>I then started coding it into html and css on vs code.</p>
+      </div>
+    </article>
+
+     <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/try1.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">Star Theme</span>
+        <p>At this stage, this was after the Workbook Part A submission, I really wanted to go out-of-the-box and not play it safe. I'm really into stars and putting them in my everyday life and graphics in general, so I tried to move the stall to outer space and have the items be stars instead of real fruits and vegetables. However, this was a struggle in aesthethics, colours and everything else above.</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/try2.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">More Stars</span>
+        <p>I kept going with this star theme and extended the scope of my homepage to be something grander and bigger than my Workbook A submission, I wanted the user to move across the page and visit different stalls and places that a market would usually have.</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/try3.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">Back to Original</span>
+        <p>I eventually found it too hard to keep up with the star aesethetic, and while it looked good in my head, I couldn't achieve it how I wanted to, so I went back to the original aesthetics and found things flowed much better after that.</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/try4.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">The Final Peice</span>
+        <p>This is the final look of my homepage!</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="entry entry--left">
+      <div class="entry-img">
+        <img src="images/try4.png" alt="progress">
+        <div class="tape tape--tl"></div>
+        <div class="tape tape--tr"></div>
+      </div>
+      <div class="entry-text">
+        <span class="entry-label">My Workbook</span>
+        <p>And this is all the pages of my workbook combined!</p>
+      </div>
+    </article>
+
+  </main>
+
+  <script>
+  // spinner rotation
+  let rotation = 0;
+  const spinners = document.querySelectorAll('.spinner');
+
+  document.addEventListener('mousemove', () => {
+    rotation += 8;
+    spinners.forEach(s => {
+      s.style.transform = `rotate(${rotation}deg)`;
+    });
+  });
+
+  // flower cursor trail
+  let pic;
+  let flowers = [];
+
+  function preload() {
+    pic = loadImage("images/flower-follow.png");
+  }
+
+  function setup() {
+    let cnv = createCanvas(windowWidth, windowHeight);
+
+    cnv.position(0, 0);
+    cnv.style('position', 'fixed');
+    cnv.style('top', '0');
+    cnv.style('left', '0');
+    cnv.style('pointer-events', 'none');
+    cnv.style('z-index', '9999');
+
+    clear();
+
+    imageMode(CENTER);
+  }
+
+  function mouseMoved() {
+    flowers.push({
+      x: mouseX,
+      y: mouseY,
+      size: random(30, 55),
+      rotation: random(-20, 20),
+      life: 255
+    });
+  }
+
+  function draw() {
+    clear();
+
+    for (let i = flowers.length - 1; i >= 0; i--) {
+      let f = flowers[i];
+
+      push();
+      translate(f.x, f.y);
+      rotate(radians(f.rotation));
+
+      tint(255, f.life);
+      image(pic, 0, 0, f.size, f.size);
+      pop();
+
+      f.life -= 6;
+
+      if (f.life <= 0) {
+        flowers.splice(i, 1);
+      }
+    }
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+  </script>
 
 </body>
 </html>

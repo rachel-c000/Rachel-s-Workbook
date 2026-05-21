@@ -35,7 +35,7 @@ p {
 .week3-page-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* 🔥 key line */
+  background-attachment: fixed; 
   background-color: rgb(55, 57, 168);
   color: beige;
   padding: 50px;
@@ -53,20 +53,29 @@ p {
 }
 
 .frog-wrapper {
-  transform: scaleY(-1, -1); /* flip once here */
+  transform: scaleY(-1, -1); 
   display: flex;
   flex-direction: row;
   transform: translate(30%, -40%);
   position: absolute;
+  top: 45px;
+  right: 300px;
 
 }
 
 .frog {
   animation: frogJump 1s ease-in-out infinite;
+  width: 90px;
+  padding: 0px -10px 0px -10px;
 }
 
-/* Navbar container */
-.week-three-navbar {
+.frog img {
+  width: 150px;
+  padding: 0px -10px 0px -10px;
+}
+
+/* nav */
+.navbar {
   margin: 0;
   width: 500px;
   padding: 15px 40px;
@@ -74,10 +83,10 @@ p {
   align-items: center;
   transform: translate(62%, 0%);
   position: absolute;
+  margin-left: 200px;
 }
 
-/* Links */
-.week-three-nav-links {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 0px;
@@ -87,7 +96,7 @@ p {
   background-color: transparent;
 }
 
-.week-three-nav-links a {
+.nav-links a {
   text-decoration: none;
   color: white;
   font-size: 16px;
@@ -95,13 +104,12 @@ p {
   background-color: transparent;
 }
 
-.week-three-nav-links li {
+.nav-links li {
 padding-left: 20px;
 padding-right: 20px;
 }
 
-/* Hover effect */
-.week-three-nav-links a:hover {
+.nav-links a:hover {
   color: #aaff66;
   transform: scale(1.1);
   background-color: transparent;
@@ -172,4 +180,132 @@ padding-right: 20px;
   color: #aaff66;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   pointer-events: none;
+}
+
+/* corner spinner! */
+
+.corner-spinner {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.corner-spinner img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.1s linear;
+}
+
+.title {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 42px;
+    transform: translate(0%, 0%);
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .title {
+    position: relative;
+    top: auto;
+    left: auto;
+    text-align: center;
+    padding: 20px 0 0;
+  }
+
+  .frog-wrapper {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    transform: none;
+    margin: 0;
+    padding: 10px 16px;
+    background: rgba(55, 57, 168, 0.92);
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .nav-links li {
+    padding: 4px 8px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .lillypad-card {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lillypad-title {
+    font-size: 18px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    white-space: normal;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .lillypad-back {
+    width: 95vw !important;
+    max-height: 85vh;
+    padding: 40px 20px 24px;
+    overflow-y: auto;
+  }
+  .prompts-carousel {
+    flex-direction: column;
+  }
+
+  .prompt img {
+    width: 100% !important;
+  }
+
+  .week3-page-bg > img {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    display: block;
+    margin: 16px auto;
+    width: 80% !important;
+    max-width: 300px;
+  }
+
+
+  .corner-spinner img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .description {
+    padding: 0 20px;
+  }
 }

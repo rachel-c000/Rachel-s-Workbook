@@ -9,6 +9,12 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 23px,
+    rgba(0,0,0,0.06) 23px,
+    rgba(0,0,0,0.06) 24px
+  );
 }
 
 .weeksix-page-bg {
@@ -27,7 +33,7 @@ body {
   width: 100%;
   padding: 15px 40px;
   display: flex;
-  justify-content: flex-end; /* pushes navbar to right */
+  justify-content: center; /* pushes navbar to right */
   position: absolute;
   top: 0;
   left: 0;
@@ -61,6 +67,12 @@ body {
   width: 600px; 
   margin: auto;
   padding: 20px;
+}
+
+.title {
+  margin: 60px;
+  display: flex;
+  align-items: start;
 }
 
 .item img {
@@ -110,6 +122,7 @@ body {
       border-radius: 8px 8px 0 0;
       display: flex;
       align-items: center;
+      margin-left: 500px;
       padding: 0 16px;
       font-size: 13px;
       font-weight: 600;
@@ -118,6 +131,45 @@ body {
       white-space: nowrap;
       user-select: none;
     }
+
+    .nav-tab {
+      position: absolute;
+      bottom: 0;
+      height: 50px;
+      width: 70px;
+      margin-left: 110px;
+      border-radius: 0px 0px 15px 15px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .nav-tab:hover {
+    transform: translateY(8px);
+    }
+
+    .nav-tab p {
+      padding: 30px 10px 10px 10px;
+    }
+
+    .nav-tab:nth-child(1) {background-color: #c12cc6; left: 200px;}
+    .nav-tab:nth-child(2) {background-color: #27c980; left: 270px;}
+    .nav-tab:nth-child(3) {background-color: #b63939; left: 340px;}
+    .nav-tab:nth-child(4) {background-color: #fffd77; left: 410px;}
+    .nav-tab:nth-child(5) {background-color: #d70068; left: 480px;}
+    .nav-tab:nth-child(6) {background-color: #40ab38; left: 550px;}
+    .nav-tab:nth-child(7) {background-color: #5a00d7; left: 620px;}
+    .nav-tab:nth-child(8) {background-color: #8fd700; left: 690px;}
+    .nav-tab:nth-child(9) {background-color: #d74800; left: 760px;} 
+    .nav-tab:nth-child(10) {background-color: #0032d7; left: 830px;}
+    .nav-tab:nth-child(11) {background-color: #7eff77; left: 900px;}
+    .nav-tab:nth-child(12) {background-color: #d70000; left: 990px;}
  
     /* tab positions alternate like real folders */
     .folder:nth-child(1) .tab-shape { left: 20px; }
@@ -163,28 +215,28 @@ body {
     }
  
     /* ── Folder colours (matching image palette) ── */
-    .folder-1 .tab-shape  { background: #8a8a7a; color: #fff; }
-    .folder-1 .folder-body { background: #9e9e8e; }
+    .folder-1 .tab-shape  { background: #008CD7; color: #fff; width: 135px;}
+    .folder-1 .folder-body { background: #008CD7; }
     .folder-1 .folder-content h2 { color: #fff; }
     .folder-1 .folder-content p  { color: #e8e4dc; }
  
-    .folder-2 .tab-shape  { background: #c8b89a; color: #4a3a2a; }
-    .folder-2 .folder-body { background: #d4c4a8; }
+    .folder-2 .tab-shape  { background: #FD809E; color: #4a3a2a; width: 80px;}
+    .folder-2 .folder-body { background: #FD809E; }
     .folder-2 .folder-content h2 { color: #4a3a2a; }
     .folder-2 .folder-content p  { color: #5a4a3a; }
  
-    .folder-3 .tab-shape  { background: #c4603a; color: #fff; }
-    .folder-3 .folder-body { background: #d07050; }
-    .folder-3 .folder-content h2 { color: #fff; }
-    .folder-3 .folder-content p  { color: #ffe8e0; }
+    .folder-3 .tab-shape  { background: #FCCC7B; color: #000000; width: 70px;}
+    .folder-3 .folder-body { background: #FCCC7B; }
+    .folder-3 .folder-content h2 { color: #000000; }
+    .folder-3 .folder-content p  { color: #000000; }
  
-    .folder-4 .tab-shape  { background: #d8a090; color: #5a2a1a; }
-    .folder-4 .folder-body { background: #e0b0a0; }
+    .folder-4 .tab-shape  { background: #FF2A41; color: #5a2a1a; width: 150px;}
+    .folder-4 .folder-body { background: #FF2A41; }
     .folder-4 .folder-content h2 { color: #5a2a1a; }
     .folder-4 .folder-content p  { color: #6a3a2a; }
  
-    .folder-5 .tab-shape  { background: #a8c8d0; color: #1a3a40; }
-    .folder-5 .folder-body { background: #b8d4dc; }
+    .folder-5 .tab-shape  { background: #06AF94; color: #1a3a40; width: 180px;}
+    .folder-5 .folder-body { background: #06AF94; }
     .folder-5 .folder-content h2 { color: #1a3a40; }
     .folder-5 .folder-content p  { color: #2a4a50; }
  
@@ -201,3 +253,20 @@ body {
       );
       pointer-events: none;
     }
+
+    /* corner spinner! */
+
+.corner-spinner {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.corner-spinner img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.1s linear;
+}

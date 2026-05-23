@@ -10,7 +10,7 @@ const SCROLL_AMOUNT = 2000;
 const EASE = 0.08;
 
 function preload() {
-  worldImg = loadImage("images/blank-canvas.png");
+  worldImg = loadImage("images/blank-canvas.jpg");
   arrowLeft = loadImage("images/left-arrow.png");
   arrowRight = loadImage("images/right-arrow.png");
 }

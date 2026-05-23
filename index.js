@@ -3,7 +3,7 @@ let targetCamX = 0;
 let worldImg;
 let arrowLeft, arrowRight;
 let scaleFactor = 1;
-let startOffset = 4000;
+let startOffset = 1250;
 
 const ARROW_SIZE = 200;
 const SCROLL_AMOUNT = 2000;

@@ -183,3 +183,138 @@ document.addEventListener('mousemove', (e) => {
   dragEl._velY = e.clientY - dragEl._prevY;
   dragEl._prevX = e.clientX;
   dragEl._prevY = e.clientY;
+
+  // move element
+  dragEl.style.left = (e.clientX - dragOffX) + 'px';
+  dragEl.style.top  = (e.clientY - dragOffY) + 'px';
+});
+
+document.addEventListener('mouseup', (e) => {
+  if (!dragEl) return;
+
+  if (!isDragging) {
+    // it was a click — navigate if link exists
+    let link = dragEl.dataset.link;
+    if (link) window.location.href = link;
+    dragEl.style.zIndex = 10;
+    dragEl = null;
+    return;
+  }
+
+  // check distance from home position (in screen space)
+  let scaledF = height / worldImg.height;
+  let homeScreenX = dragEl._homeWorldX * scaledF - camX * scaledF;
+  let homeScreenY = dragEl._homeWorldY * scaledF;
+  let curX = parseFloat(dragEl.style.left);
+  let curY = parseFloat(dragEl.style.top);
+  let dist = Math.sqrt((curX - homeScreenX) ** 2 + (curY - homeScreenY) ** 2);
+
+if (dist < SNAP_RADIUS) {
+    // snap back home — let draw loop take over
+    dragEl._falling = false;
+    dragEl._onGround = false;
+    dragEl._snappedHome = false;
+    dragEl.style.transition = 'none';
+    dragEl.style.zIndex = 10;
+  } else {
+    // let it fall with gravity
+    dragEl._velX = dragEl._velX * 0.5;
+    dragEl._velY = dragEl._velY * 0.5;
+    dragEl._falling = true;
+    animating.push(dragEl);
+  }
+
+  dragEl = null;
+  isDragging = false;
+});
+
+// ============================================================
+//  GRAVITY ANIMATION LOOP
+// ============================================================
+function animateGravity() {
+  let groundY = window.innerHeight * GROUND_OFFSET;
+
+  animating.forEach(el => {
+    if (!el._falling) return;
+
+    el._velY += GRAVITY;
+    let curX = parseFloat(el.style.left);
+    let curY = parseFloat(el.style.top);
+    let newX = curX + el._velX;
+    let newY = curY + el._velY;
+
+    // ground collision
+    let elH = el.offsetHeight;
+    if (newY + elH >= groundY) {
+      newY = groundY - elH;
+      el._velY *= -BOUNCE;
+      el._velX *= 0.85;
+
+if (Math.abs(el._velY) < 1) {
+  el._velY = 0;
+  el._velX = 0;
+  el._falling = false;
+  el._onGround = true;
+  // save ground position in world space
+  let scaledF = height / worldImg.height;
+  el._groundWorldX = (newX + camX * scaledF) / scaledF;
+  el._groundWorldY = newY / scaledF;
+}
+    }
+
+    el.style.left = newX + 'px';
+    el.style.top  = newY + 'px';
+  });
+
+  // clean up settled items
+  animating = animating.filter(el => el._falling);
+
+  requestAnimationFrame(animateGravity);
+}
+
+animateGravity();
+
+const cursor = document.querySelector(".cursor");
+const cursorImg = document.querySelector(".cursor img");
+
+/* cursor images */
+const defaultCursor = "images/index-cursor-default.png";
+const hoverCursor = "images/index-cursor-hover.png";
+
+/* move cursor */
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+/* selectable items */
+const interactables = document.querySelectorAll(".has-link");
+
+/* hover effects */
+interactables.forEach(item => {
+
+  item.addEventListener("mouseenter", () => {
+    cursorImg.src = hoverCursor;
+  });
+
+  item.addEventListener("mouseleave", () => {
+    cursorImg.src = defaultCursor;
+  });
+
+});
+
+/* js for market key */
+
+const keyItems = document.querySelectorAll(".key-item");
+
+keyItems.forEach(item => {
+
+  item.addEventListener("click", () => {
+
+    const newCamX = parseFloat(item.dataset.camx);
+
+    targetCamX = newCamX;
+
+  });
+
+});
